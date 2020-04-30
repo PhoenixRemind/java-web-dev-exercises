@@ -1,5 +1,4 @@
 package org.launchcode.java.studios.RestarauntMenu.restaraunt;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +9,6 @@ public class Menu {
 
     private List<MenuItem> menu;
     private LocalDateTime lastUpdated;
-
 
     //Constructor for Menu
     public Menu() {
@@ -24,8 +22,15 @@ public class Menu {
         lastUpdated = LocalDateTime.now();
     }
 
+    //We can iterate through the menu here using a menuId to determine what to remove
     public void removeMenuItem(int menuItemId) {
-        //We can iterate through the menu here using a menuId to determine what to remove
+        for (int i = 0; i < menu.size(); i++) {
+            if (menu.get(i).getMenuId() == menuItemId) {
+                menu.remove(i);
+                lastUpdated = LocalDateTime.now();
+                break;
+            }
+        }
     }
 
     //return the entire menu of menuItems
@@ -37,6 +42,5 @@ public class Menu {
     public LocalDateTime getLastUpdated() {
         return lastUpdated;
     }
-
 
 }

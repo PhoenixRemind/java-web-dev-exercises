@@ -2,10 +2,10 @@ package org.launchcode.java.studios.RestarauntMenu.restaraunt;
 
 public class MenuItem {
 
-    private int menuId;
-    private String description;
-    private double price;
-    private String category;
+    private final int menuId;
+    private final String description;
+    private final double price;
+    private final String category;
     private Boolean isNew;
 
 
@@ -21,16 +21,6 @@ public class MenuItem {
     public MenuItem(int menuId, String description, double price, String category) {
         this(menuId, description, price, category, false);
     }
-
-    public void setMenuId(int menuId) { this.menuId = menuId; }
-
-    public void setDescription(String description) { this.description = description; }
-
-    public void setPrice(double price) { this.price = price; }
-
-    public void setCategory(String category) { this.category = category; }
-
-    public void setIsNew(Boolean isNew) { this.isNew = isNew; }
 
     public int getMenuId() {
         return menuId;
@@ -48,7 +38,7 @@ public class MenuItem {
         return category;
     }
 
-    public Boolean getIsNew() {
+    public boolean IsNew() {
         return isNew;
     }
 

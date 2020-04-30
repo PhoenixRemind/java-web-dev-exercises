@@ -12,9 +12,9 @@ public class Restaurant {
             int selection = 0;
             do {
                 System.out.println();
-                System.out.println("Welcome to Wantons on Wheels!");
-                System.out.println("1) Print the menu");
-                System.out.println("2) Print single menu item");
+                System.out.println("Welcome to Wantons on Wheels *GRAND OPENING!*");
+                System.out.println("1) Show entire menu");
+                System.out.println("2) Show single menu item");
                 System.out.println("3) Add a menu item");
                 System.out.println("4) Remove a menu item");
                 System.out.println("5) Exit");
@@ -34,12 +34,12 @@ public class Restaurant {
                         break;
                     case 2:
                         System.out.print("Enter the menu ID you wish to print: ");
-                        String userInToPrint = in.nextLine();
+                        String userInputPrint = in.nextLine();
 
-                        int menuIdToPrint = Integer.parseInt(userInToPrint);
+                        int menuIdPrint = Integer.parseInt(userInputPrint);
 
                         for (MenuItem menuItem : menu.getMenu()) {
-                            if (menuItem.getMenuId() == menuIdToPrint) {
+                            if (menuItem.getMenuId() == menuIdPrint) {
                                 System.out.println(menuItem);
                                 break;
                             }
@@ -63,18 +63,18 @@ public class Restaurant {
                         System.out.print("Please enter the menu item ID you wish to delete: ");
                         String deleteItemId = in.nextLine();
 
-                        int menuIdToDelete = Integer.parseInt(deleteItemId);
-                        menu.removeMenuItem(menuIdToDelete);
+                        int menuIdDelete = Integer.parseInt(deleteItemId);
+                        menu.removeMenuItem(menuIdDelete);
 
                         break;
                 }
 
             } while (selection != 5);
 
-            System.out.println("Thank you and Goodbye!");
+            System.out.println("Thank you for visiting Wantons on Wheels, Goodbye!");
             System.exit(0);
         } catch (Exception e) {
-            System.err.println("I can't do that, Dave. -Hal9000");
+            System.err.println("I'm sorry, Dave. I'm afraid I can't do that. -Hal9000");
             System.exit(1);
         }
     }
