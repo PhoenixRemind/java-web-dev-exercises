@@ -37,4 +37,6 @@ public class Menu {
     public LocalDateTime getLastUpdated() {
         return lastUpdated;
     }
+
+
 }
