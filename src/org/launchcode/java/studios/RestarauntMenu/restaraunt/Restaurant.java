@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Restaurant {
     private static Menu menu = new Menu();
-    private static int menuIdNum = 1;
+    private static int menuIdNum = 0;
 
     public static void main(String[] args) {
 
@@ -12,7 +12,7 @@ public class Restaurant {
             int selection = 0;
             do {
                 System.out.println();
-                System.out.println("Welcome to Wantons on Wheels *GRAND OPENING!*");
+                System.out.println("Welcome to Wontons on Wheels *GRAND OPENING!*");
                 System.out.println("1) Show entire menu");
                 System.out.println("2) Show single menu item");
                 System.out.println("3) Add a menu item");
@@ -71,7 +71,7 @@ public class Restaurant {
 
             } while (selection != 5);
 
-            System.out.println("Thank you for visiting Wantons on Wheels, Goodbye!");
+            System.out.println("Thank you for visiting Wontons on Wheels, Goodbye!");
             System.exit(0);
         } catch (Exception e) {
             System.err.println("I'm sorry, Dave. I'm afraid I can't do that. -Hal9000");
